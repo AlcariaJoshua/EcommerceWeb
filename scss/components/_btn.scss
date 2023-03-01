@@ -27,7 +27,7 @@
     &-dark{
         background-color: $clr-dark;
         color: $clr-light;
-        border-color: $clr-primary;
+        border-color: $clr-dark;
         &:hover{
             background-color: darken($clr-dark, 10);
         }

@@ -505,7 +505,7 @@ header .header__nav a.active::after {
 .product .product__cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  grid-gap: 2rem;
 }
 
 .product__item {
@@ -692,6 +692,7 @@ header .header__nav a.active::after {
   border-radius: 3rem;
   display: grid;
   grid-template-columns: 2fr 1fr;
+  grid-gap: 2rem;
   height: 100%;
   max-height: 44rem;
   overflow: hidden;
@@ -723,6 +724,7 @@ header .header__nav a.active::after {
 .testimonial .testimonials__wrapper .testimonial__card {
   display: grid;
   grid-template-columns: 1fr 1.8fr;
+  grid-gap: 2rem;
   align-items: center;
   grid-gap: 1rem;
   border-radius: 1rem;
@@ -889,7 +891,7 @@ footer a {
 footer .footer__wrapper {
   display: grid;
   grid-template-columns: 1.3fr 1fr 1fr 1fr;
-  gap: 5rem;
+  grid-gap: 2rem;
 }
 footer .footer__item h3 {
   text-transform: uppercase;

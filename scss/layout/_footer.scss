@@ -8,9 +8,7 @@ footer{
         color: $clr-light;
     }
     .footer__wrapper{
-        display: grid;
-        grid-template-columns: 1.3fr 1fr 1fr 1fr;
-        gap: 5rem;
+        @include gridUneven(1.3fr 1fr 1fr 1fr, 2rem)
     }
 
     .footer__item{

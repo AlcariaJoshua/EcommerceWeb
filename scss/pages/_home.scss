@@ -1,17 +1,21 @@
 .banner{
     &__wrapper{
         min-height: calc(100vh - 60px);
+        @include mediaQuery($mobile){
+            margin-top: 5rem;
+            min-height: auto;
+            justify-content: flex-start;
+            gap: 5rem;
+            flex-direction: column-reverse;
+            padding: 0 5rem;
+        }
     }
     &__content{
         max-width: 50rem;
         width: 100%;
         h1{
             font-size: clamp(3rem, 6vw, 6rem);
-            font-weight: bold;
             margin-bottom: 2rem;
-            span{
-                color:$clr-primary;
-            }
         }
         p{
             font-size: 1.8rem;
@@ -30,7 +34,11 @@
 .product{
    
    .product__cards{
-    @include grid(4, 2rem)
+    @include grid(4, 2rem);
+    @include mediaQuery($mobile){
+        @include grid(1, 2rem);
+        padding: 0 5rem;
+    }
    }
 }
 
@@ -125,6 +133,10 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 2rem;
+        @include mediaQuery($mobile){
+            @include grid(1, 2rem);
+            padding: 0 5rem;
+        }
     }
 
     .category__tab{
@@ -170,8 +182,11 @@
     background-size: cover;
     background-position-x: 800px;
     background-position-y: -400px;
+    @include mediaQuery($mobile){
+        background-position-x: 0;
+        background-position-y: 0;
+    };
     .container{
-
         .booking__content{
             background-color: $clr-primary;
             color: $clr-light;
@@ -181,6 +196,13 @@
             display: grid;
             place-items: center;
             justify-content: flex-start;
+
+            @include mediaQuery($mobile){
+                
+                width: 100%;
+                background-color: rgba($clr-primary, 0.6);
+            };
+
             &::before{
                 content: '';
                 position: absolute;
@@ -202,7 +224,6 @@
                }
                h2{
                 font-size: clamp(3rem, 6vw, 5rem);
-                font-weight: bold;
                 margin: 4rem 0;
                }
                p{
@@ -220,6 +241,11 @@
 .work{
     .work__wrapper{
        @include grid(4, 2rem);
+       @include mediaQuery($mobile){
+        @include grid(1, 2rem);
+        padding: 0 5rem;
+    }
+   
 
         .work__card{
             padding: 2rem;
@@ -234,7 +260,6 @@
                 font-size: 2rem;
                 margin: 2rem 0;
                 color: $clr-primary;
-                font-weight: bold;
             }
             p{
                 opacity: .5;
@@ -251,6 +276,14 @@
         background-color: lighten($clr-primary-light , 20); 
         border-radius: 3rem;
        @include gridUneven(2fr 1fr, 2rem);
+        @include mediaQuery($mobile){
+            @include grid(1, 2rem);
+            padding: 0 5rem;
+            max-height: 60rem;
+            align-items: center;
+            text-align: center;
+            
+        }
         height: 100%;
         max-height: 44rem;
         overflow: hidden;
@@ -260,7 +293,6 @@
             
             h2{
                 font-size: clamp(3rem, 6vw, 5rem);
-                font-weight: bold;
                 margin: 4rem 0 1rem;
                 span{
                     color: $clr-primary;
@@ -275,6 +307,7 @@
           
          
         }
+       
     }
 }
 
@@ -284,6 +317,10 @@
 
     .testimonials__wrapper{
         @include grid(3, 2rem);
+        @include mediaQuery($mobile){
+            @include grid(1, 2rem);
+            padding: 0 5rem;
+        }
 
         .testimonial__card{
            @include gridUneven(1fr 1.8fr, 2rem);
@@ -408,6 +445,14 @@
                     border-radius: .5rem;
                     border: 3px solid $clr-light;
                     transform: translateX(-11px);
+
+                    @include mediaQuery($mobile){
+                        @include grid(1, 2rem);
+                        width: 28rem;
+                        margin-top: 1rem;
+                        margin: 0 auto;
+                        transform: translatex(0rem);
+                    }
 
                 }
             }

@@ -1,0 +1,225 @@
+.info{
+    &__wrapper{
+        @include grid(2, 10rem);
+        @include mediaQuery($mobile){
+            display: flex;
+            flex-direction: column;
+            padding: 0 2rem;
+        }
+
+    }
+
+    &__image__large{
+        padding: 2.5rem;
+        border-radius: 2rem;
+        box-shadow: $shadow;
+        margin-bottom: 4rem;
+        background-color: $clr-light;
+        margin-bottom: 7rem;
+        text-align: center
+    }
+
+    &__image__variation{
+        @include grid(3, 2rem);
+
+        button{
+            padding: 2rem;
+            background-color: $clr-light;
+            border-radius: 2rem;
+            box-shadow: $shadow;
+            text-align: center;
+            height: 12rem;
+            img{
+                border-radius: 50%;
+                @include imgFit(10rem, 10rem);
+                    transform: translateY(-5rem);
+            }
+        }
+        h3{
+            transform: translateY(-5rem);
+        }
+    }
+
+    
+        &__content__header{
+           
+            h1{
+                font-size: clamp(5rem, 6vw, 4rem);
+            }
+
+            .meta, ul{
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+            }
+            ul{
+                gap: .5rem;
+  
+                li i{
+                    color: $clr-primary;
+                }
+                li:last-child i {
+                    color: #e6e6e6;
+                }
+            }
+            small{
+                color: #ccc;
+                font-size: 1.2rem;
+            }
+            .prices{
+                margin: 2rem 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                h2{
+                    font-size: 3rem;
+                    color: $clr-primary;
+                }
+                p{
+                    margin: 0;
+                    color: $clr-primary;
+                    text-decoration: line-through;
+                }
+                h3{
+                    font-size: 2rem;
+                    color: #ccc;
+                }
+            }
+        }
+
+        &__content__body{
+           
+            h3{
+                font-size: 2.5rem;
+                margin-bottom: 2rem;
+            }
+            p{
+                text-align: justify;
+                margin-bottom: 2rem;
+            }
+            .sizes{
+               
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                max-width: 20rem;
+              
+                li{
+                    background-color: #f5f5f5;
+                    color: #cacaca;
+                    font-weight: bold;
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: 50%;
+                    @include centerAll
+                }
+                li.active{
+                    background-color: $clr-primary;
+                    color: $clr-light;
+                    box-shadow: 0px 4px 10px rgba($clr-primary, .3);
+                }
+            }
+            .quantity{
+                display: inline-flex;
+                gap: 2.5rem;
+                align-items: center;
+                padding: .6rem 1.8rem;
+                border-radius: 2rem;
+                background-color: #f5f5f5;
+                box-shadow: $shadow;
+                border: 1px solid #cacaca;
+           
+                li{
+                    font-weight: bold;
+                    cursor: pointer;
+                    
+                }
+                li:first-child{
+                    color: #ccc;
+                    
+                }
+            }
+           
+        }
+        .btn{
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+            padding: 1rem;
+            margin: 5rem;
+            display: block;
+            @include mediaQuery($mobile){
+                width: 100%;
+                max-width: 80%;
+            }
+        }
+        
+}
+
+.related__foods{
+    padding: 6rem 0;
+    border-top: 1px solid #f5f5f5;
+    @include mediaQuery($mobile){
+       padding: 0 2rem;
+    }
+
+    h3{
+        margin-bottom: 8rem;
+        font-size: 2rem;
+    }
+    
+        // .related__food__wrapper{
+        //     display: grid;
+        //     grid-template-columns: repeat(6, 1fr);
+        //     gap: 2rem;
+        // }
+        
+        &__card{
+            padding: 2rem;
+            background-color: $clr-light;
+            border-radius: 2rem;
+            box-shadow: $shadow;
+            text-align: center;
+            height: 12rem;
+            margin: 0 1rem;
+            img{
+                border-radius: 50%;
+                @include imgFit(10rem, 10rem);
+                    transform: translateY(-5rem);
+            }
+            h3{
+            
+            transform: translateY(-4rem);
+        }
+        }
+        
+        .related__foods__card:hover{
+            transform: scale(.9);
+            transition: .5s ease-in-out;
+        }
+        
+
+}
+
+.tns-inner{
+    height: 25rem;
+    transform: translateY(37px);
+    width: 100%;
+    max-width: 70rem;
+}
+
+.tns-controls{
+    display: flex;
+    justify-content: space-between;
+    button{
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        @include centerAll;
+        background-color: $clr-primary;
+        color: $clr-light;
+        font-size: 2rem;
+
+
+    }
+}
